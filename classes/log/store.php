@@ -59,7 +59,7 @@ class store extends php_obj implements log_writer {
      */
     public function __construct(log_manager $manager) {
         $this->helper_setup($manager);
-            echo ("<script>console.log( 'Debug Objects: started' );</script>");
+        
     }
 
     /**

@@ -83,7 +83,7 @@ abstract class Event extends PhpObj {
                     'description' => [
                         $opts['context_lang'] => $opts['module_description'],
                         ],
-                      
+
             ],
         ];
 
@@ -167,7 +167,7 @@ abstract class Event extends PhpObj {
 
         $o=print_r($opts,true);
 
-        echo("<script>console.log( 'Debug 1: ".$o."' );</script>");
+        
         $module = [
             'id' => $opts['module_url'],
             'definition' => [

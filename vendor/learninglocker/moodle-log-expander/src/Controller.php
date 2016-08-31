@@ -48,7 +48,6 @@ class Controller extends PhpObj {
     public function __construct(Repository $repo) {
         $this->repo = $repo;
 
-        echo ("<script>console.log( 'Debug Objects: Constructing Expander' );</script>");
 
     }
 
@@ -78,12 +77,11 @@ class Controller extends PhpObj {
     public function createEvents(array $events) {
         $results = [];
 
-          echo ("<script>console.log( 'Debug Objects: Creating events' );</script>");
 
         foreach ($events as $index => $opts) {
 
             $route = isset($opts['eventname']) ? $opts['eventname'] : '';
-              echo ("<script>console.log( 'Debug Objects: ".$route."' );</script>");
+        
             if (isset(static::$routes[$route]) && ($opts['userid'] > 0 || $opts['relateduserid'] > 0)) {
                 $event = '\LogExpander\Events\\'.static::$routes[$route];
                 array_push($results , (new $event($this->repo))->read($opts));

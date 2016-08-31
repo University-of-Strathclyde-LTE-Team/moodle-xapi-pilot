@@ -37,7 +37,6 @@ class Controller extends PhpObj {
         $statements = [];
         foreach ($events as $index => $opts) {
 
-          echo ("<script>console.log( 'Debug Objects: here' );</script>");
 
             $route = isset($opts['recipe']) ? $opts['recipe'] : '';
 

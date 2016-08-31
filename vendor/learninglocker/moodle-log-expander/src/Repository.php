@@ -152,15 +152,15 @@ class Repository extends PhpObj {
      */
     public function readGradeComment($grade_id, $assignment_id) {
         $model = $this->readStoreRecord(
-            'assignfeedback_comments', 
+            'assignfeedback_comments',
             [
-                'assignment' => $assignment_id, 
+                'assignment' => $assignment_id,
                 'grade' => $grade_id
             ]
         );
         return $model;
     }
-    
+
     /**
      * Reads a feedback attempt from the store with the given id.
      * @param String $id
