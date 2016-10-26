@@ -59,7 +59,7 @@ class store extends php_obj implements log_writer {
      */
     public function __construct(log_manager $manager) {
         $this->helper_setup($manager);
-        
+
     }
 
     /**
@@ -77,7 +77,7 @@ class store extends php_obj implements log_writer {
 
                 $checkstring = ",".$user.",";
 
-                if (strpos($list, $checkstring)) {
+                if (strpos($list, $checkstring) !== false) {
                     return false;
                   }
                   else {
